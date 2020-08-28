@@ -1,0 +1,24 @@
+<h1>Danh sách hàng hóa</h1>
+<div  >
+    <div style="float:left;"><button routerLink="/d" class="btn btn-primary">Thêm mới</button></div>
+    <table id="product" class="table">
+        <thead class="table-light">
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+        </thead>
+        <tbody class="productItem" *ngFor="let pr of listPro">
+            <tr>
+                <td>{{pr.productId}}</td>
+                <td><a routerLink="/detail/{{pr.productId}}" style="text-decoration: none;">{{pr.name}}</a></td>
+                <td>{{pr.price}}</td>
+                <td><a routerLink="/detail/{{pr.productId}}">Sửa</a></td>
+            </tr>
+        </tbody>
+    </table>  
+</div>
+
+<main id="logout-button-holder">
+  <button mat-raised-button id="logout-button" (click)="openModal()">Logout</button>
+</main>

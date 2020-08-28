@@ -1,0 +1,32 @@
+
+
+<div>
+    <div class="top">
+        <h1>Danh sach nhan vien</h1>
+    </div>
+    <div class="middle">
+
+        <table class="table">
+            <thead class="thead-light">
+                <th scope="col">STT</th>
+                <th scope="col">Họ tên</th>
+                <th scope="col">Điện thoại</th>
+                <th scope="col">Email</th>
+                <th scope="col">Chức vụ</th>
+                <th scope="col">Phòng ban</th>
+                <th scope="col"> Hành động</th>
+            </thead>
+            <tbody *ngFor="let user of listUser">
+                <tr >
+                    <td >{{user.userId}}</td>
+                    <td >{{user.firstName}} {{user.lastName}}</td>
+                    <td >{{user.phone}}</td>
+                    <td >{{user.email}}</td>
+                    <td >{{user.position}}</td>
+                    <td >{{user.departments}}</td>
+                    <td><a routerLink="">Sửa</a><i class="bi bi-pencil"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

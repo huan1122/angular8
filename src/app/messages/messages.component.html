@@ -1,0 +1,6 @@
+<p>messages works!</p>
+<div *ngIf="messagesSerive.mesages.length" style="text-align: left;">
+    <h5>Messages</h5>
+    <button class="clear" (click)="messagesSerive.deleteAll()">Delete</button>
+    <div *ngFor="let m of messagesSerive.mesages">{{m}}</div>
+</div>

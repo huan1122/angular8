@@ -1,0 +1,20 @@
+#product{
+    vertical-align: middle !important;
+    padding: 0.5em 1em 0.5em 1em;
+
+}
+#product .productItem{
+    font-size: 0.875em;
+    padding:0.2em;
+    color: lightcoral;
+    margin: .2em;
+}
+.selected{
+    color: lightcoral;
+    background: maroon !important;
+}
+#logout-button {
+    color: white;
+    background-color: #4b4b4b;
+    border: 1px solid black;
+}

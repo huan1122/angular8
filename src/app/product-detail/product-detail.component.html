@@ -1,0 +1,16 @@
+<p>product-detail works!</p>
+<div *ngIf="product" class="detail">
+    <h3>you choses {{product.name}}</h3>
+    <div>
+    <label>
+        name:
+        <input  [(ngModel)]="product.name" placeholder="name"/>
+    </label>
+    <label>
+        price: 
+        <input  [(ngModel)] ="product.price" placeholder="price"/> 
+    </label>
+    </div>
+    <button (click)="save()" class="btn btn-primary">save</button>
+    <button (click)="goBack()" class="btn">back</button>
+</div>
