@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:'detail/:id',component:ProductDetailComponent},
   {path:'d',component:ProductEditComponent},
   {path:'home',component:AppComponent},
-  {path: 'userEdit',component:UserEditComponent},
+  {path: 'userEdit/:id',component:UserEditComponent},
   {path: 'userList',component:UserListComponent},
   { path: '**', redirectTo: '' }
 ];

@@ -13,12 +13,10 @@
                 <td>{{pr.productId}}</td>
                 <td><a routerLink="/detail/{{pr.productId}}" style="text-decoration: none;">{{pr.name}}</a></td>
                 <td>{{pr.price}}</td>
-                <td><a routerLink="/detail/{{pr.productId}}">Sửa</a></td>
+                <td><a routerLink="/detail/{{pr.productId}}"><fa-icon [icon] = 'faEdit'></fa-icon></a>
+                    <a routerLink="/detail/{{pr.productId}}"><fa-icon [icon] = 'faTrash'></fa-icon></a>
+                </td>
             </tr>
         </tbody>
     </table>  
 </div>
-
-<main id="logout-button-holder">
-  <button mat-raised-button id="logout-button" (click)="openModal()">Logout</button>
-</main>

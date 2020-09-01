@@ -25,9 +25,12 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="name"><span>Ngày sinh</span></label>
-                <dp-date-picker class="form-control" [(ngModel)]="user.birth" ></dp-date-picker>
-                
+                <label for="name"><span>Birthday</span></label>
+                <mat-form-field >
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker startView="year" ></mat-datepicker>
+                  </mat-form-field>
             </div>
             <div class="form-group">
                 <label for="name"><span>Address</span></label>

@@ -23,7 +23,12 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import {DpDatePickerModule } from 'ng2-date-picker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatNativeDateModule,} from '@angular/material/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { OrderComponent } from './order/order.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +44,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CustomerEditComponent,
     LoginComponent,
     UserListComponent,
-    UserEditComponent
+    UserEditComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
@@ -49,12 +55,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModalModule,
     HttpClientModule,
     DpDatePickerModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FontAwesomeModule
   ],
   providers: [
     MessagesService,
     ProductService
   ],
+  exports: [
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule
+ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

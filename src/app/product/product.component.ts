@@ -3,6 +3,7 @@ import {Product} from '../../models/product';
 import {ProductService} from '../product.service'
 import { from } from 'rxjs';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { faSearch, faBell, faUser,faCircle, faEdit,faTrash } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -10,6 +11,9 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 })
 export class ProductComponent implements OnInit {
   // listPro = listProduct;
+  faEdit = faEdit;
+  faTrash = faTrash;
+  faCricle = faCircle;
   listPro : Product[];
   selectProduct :Product;
  
